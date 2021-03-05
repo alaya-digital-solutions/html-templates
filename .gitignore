@@ -5,7 +5,6 @@ __pycache__/
 
 # C extensions
 *.so
-*.png
 # package yaml
 packaged.yaml
 # Distribution / packaging
@@ -76,7 +75,9 @@ docs/_build/
 # PyBuilder
 target/
 
+# B
 # Jupyter Notebook
+A
 .ipynb_checkpoints
 
 # IPython
@@ -142,9 +143,6 @@ config.ini
 
 # AWS
 .aws-sam
-
-# png
-*.png
 
 # Models
 *.h5

@@ -1,55 +1,29 @@
-<!DOCTYPE html>
-<container>
-    <left>
-      <img src="https://tiresopt-anglo-output.s3.amazonaws.com/alaya.png" , alt="titleImage", width="600" height="200">
-    </left>
-<html>
+{% block content %}
 <head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  border: solid #690909;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #ffffff;
-  text-align: center;
-  padding: 30px;
-}
-
-tr:nth-child(even) {
-  background-color: #6e1919;
-}
-</style>
+    <title>Vida Remanente de Neumáticos</title>
 </head>
-<body>
-<center>
-<h2>Vida Remanente de Neumáticos</h2>
-</center>
 
-<table>
-    <tr>
-    <th>Equipo</th>
-    <th>ID Neumáticos</th>
-    <th>Vida Remanente en días</th>
-  </tr>
-  <tr>
-    <td>CAEX 68</td>
-    <td>193504</td>
-    <td>46 días</td>
-  </tr>
-  <tr>
-    {% for neumatico in range(len(content)) %}
-        <td>{{content[neuamtico][0]}}</td>
-        <td>{{content[neuamtico][1]}}</td>
-        <td>{{content[neuamtico][2]}}</td>
+{% endblock %}
+
+{% block body %}
+    {% for equipo, id_neumatico, remaining_useful_life in tables %}
+        <TABLE>
+        <thead>
+        <tr>
+         <th>Equipo</th>
+         <th>ID Neumático</th> 
+         <th>Vida Remanente del Activo</th> 
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <td>{{ equipo }}</td>
+          <td>{{ id_neumatico }}</td>
+          <td>{{ remaining_useful_life }}</td>
+          </tr>
+          </tbody>
+          </TABLE>
+
     {% endfor %}
-  </tr>
-</table>
 
-</body>
-</html>
-
-    
+{% endblock %}

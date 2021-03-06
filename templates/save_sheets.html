@@ -41,12 +41,17 @@ tr:nth-child(even) {
     <td>46 días</td>
   </tr>
   <tr>
-    {% for neumatico in range(len(content)) %}
-        <td>{{content[neuamtico][0]}}</td>
-        <td>{{content[neuamtico][1]}}</td>
-        <td>{{content[neuamtico][2]}}</td>
+    {% for i in range(len(content)) %}
+        {% caex = content[i][0] %}
+        {% id_neuamtico = content[i][1] %}
+        {% vida = content[i][2] %}
+        <td>{{caex}}</td>
+        <td>{{id_neuamtico}}</td>
+        <td>{{vida}}</td>
     {% endfor %}
   </tr>
+
+
 </table>
 
 </body>
